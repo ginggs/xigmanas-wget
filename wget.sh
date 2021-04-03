@@ -3,6 +3,7 @@
 # author:       Graham Inggs
 # date:         2019-10-29 ; Initial release for XigmaNAS 12.0.0.4
 # date:         2019-11-25 ; Updated for XigmaNAS 12.1.0.4
+# date:         2021-04-03 ; Updated for XigmaNAS 12.2.0.4
 # purpose:      Install Wget on XigmaNAS (embedded version).
 # Note:         Check the end of the page.
 #
@@ -14,7 +15,7 @@ REL_MAJOR=`echo $RELEASE | cut -d. -f1`
 REL_MINOR=`echo $RELEASE | cut -d. -f2`
 URL="http://distcache.freebsd.org/FreeBSD:${REL_MAJOR}:${PLATFORM}/release_${REL_MINOR}/All"
 WGETFILE="wget-1.20.3.txz"
-LIBIDN2FILE="libidn2-2.2.0.txz"
+LIBIDN2FILE="libidn2-2.3.0_1.txz"
 #----------------------- Set Errors ---------------------------------------------------------------------
 _msg() { case $@ in
   0) echo "The script will exit now."; exit 0 ;;
