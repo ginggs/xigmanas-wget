@@ -35,7 +35,7 @@ if [ ! -f ${DIR}/usr/local/lib/libidn2.so ]; then
   if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2};
     rm ${DIR}/+*; rm -R ${DIR}/usr/local/libdata; rm -R ${DIR}/usr/local/man;
     rm -R ${DIR}/usr/local/include; rm ${DIR}/usr/local/lib/*.a; fi
-  if [ ! -d ${DIR}/usr/local/lib ]; then _msg 4; fi
+  if [ ! -f ${DIR}/usr/local/lib/libidn2.so ]; then _msg 4; fi
 fi
 #----------------------- Download and decompress libunistring files if needed ---------------------------
 PKG="libunistring"
@@ -44,7 +44,7 @@ if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then
   if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2};
     rm ${DIR}/+*;
     rm -R ${DIR}/usr/local/include; fi
-  if [ ! -d ${DIR}/usr/local/lib ]; then _msg 4; fi
+  if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then _msg 4; fi
 fi
 #----------------------- Create symlinks ----------------------------------------------------------------
 for i in `ls $DIR/usr/local/bin/`
