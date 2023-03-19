@@ -42,8 +42,7 @@ PKG="libunistring"
 if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then
   if [ ! -e ${DIR}/All/${PKG}-*.pkg ]; then pkg fetch -o ${DIR} -y ${PKG} || _msg 1; fi
   if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2};
-    rm ${DIR}/+*;
-    rm -R ${DIR}/usr/local/include; fi
+    rm ${DIR}/+*; rm -R ${DIR}/usr/local/include; fi
   if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then _msg 4; fi
 fi
 #----------------------- Create symlinks ----------------------------------------------------------------
