@@ -28,7 +28,7 @@ if [ ! -d ${DIR}/usr/local/bin ]; then
     rm ${DIR}/+*; rm -R ${DIR}/usr/local/man; rm -R ${DIR}/usr/local/share; fi
   if [ ! -d ${DIR}/usr/local/bin ] ; then _msg 4; fi
 fi
-#----------------------- Download and decompress libssh2 files if needed --------------------------------
+#----------------------- Download and decompress libidn2 files if needed --------------------------------
 PKG="libidn2"
 if [ ! -f ${DIR}/usr/local/lib/libidn2.so ]; then
   if [ ! -e ${DIR}/All/${PKG}-*.pkg ]; then pkg fetch -o ${DIR} -y ${PKG} || _msg 1; fi
