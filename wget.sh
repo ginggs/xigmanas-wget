@@ -33,7 +33,7 @@ fi
 PKG="libidn2"
 if [ ! -f ${DIR}/usr/local/lib/libidn2.so ]; then
   if [ ! -e ${DIR}/All/${PKG}-*.pkg ]; then pkg fetch -o ${DIR} -y ${PKG} || _msg 1; fi
-  if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2};
+  if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2;
     rm ${DIR}/+*; rm -R ${DIR}/usr/local/libdata; rm -R ${DIR}/usr/local/man;
     rm -R ${DIR}/usr/local/include; rm ${DIR}/usr/local/lib/*.a; fi
   if [ ! -f ${DIR}/usr/local/lib/libidn2.so ]; then _msg 4; fi
@@ -42,7 +42,7 @@ fi
 PKG="libunistring"
 if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then
   if [ ! -e ${DIR}/All/${PKG}-*.pkg ]; then pkg fetch -o ${DIR} -y ${PKG} || _msg 1; fi
-  if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2};
+  if [ -f ${DIR}/All/${PKG}-*.pkg ]; then tar xzf ${DIR}/All/${PKG}-*.pkg || _msg 2;
     rm ${DIR}/+*; rm -R ${DIR}/usr/local/include; fi
   if [ ! -f ${DIR}/usr/local/lib/libunistring.so ]; then _msg 4; fi
 fi
